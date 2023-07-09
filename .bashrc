@@ -58,3 +58,7 @@ curl_add_ip(){
     curl $ENDPOINT -X POST -d $DATA --post301 -L -k
 }
 alias lpm_whitelist_ip='curl_add_ip'
+
+# append history immediately to bashrc
+shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
