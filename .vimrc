@@ -67,8 +67,7 @@ nmap <silent> <leader>wb ysiw*gvS*
 
 """" Vim Appearance
 
-" put colorscheme files in ~/.vim/colors/
-colorscheme palenight      " good colorschemes: murphy, slate, molokai, badwolf, solarized
+
 
 " use filetype-based syntax highlighting, ftplugins, and indentation
 syntax enable
@@ -113,3 +112,7 @@ set nohlsearch          " never highlight search hits
 
 let g:vimwiki_list = [{'path': '~/Documents/', 'syntax': 'markdown', 'ext': '.md'},
       \ {'path': '~/Private/', 'syntax': 'markdown', 'ext': '.md'}]
+
+" put colorscheme files in ~/.vim/colors/
+" colorscheme palenight      " good colorschemes: murphy, slate, molokai, badwolf, solarized
+call timer_start(1, {-> execute("colorscheme palenight")})

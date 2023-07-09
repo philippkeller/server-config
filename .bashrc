@@ -12,6 +12,7 @@ alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance
 alias python=python3
 alias pip=pip3
 alias j='nocolor | jq .'
+alias vim=nvim
 
 # to make this work, you need to add a proxyjump to ~/.ssh/config:
 # Host platform_data_prod
