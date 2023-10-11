@@ -2,7 +2,7 @@
 
 sudo apt update
 sudo apt install -y jq build-essential postgresql automake
-sudo apt install -y python3-venv
+sudo apt install -y python3-venv ripgrep
 
 # tmux
 sudo apt remove tmux -y # version 3.2 is auto installed
@@ -37,3 +37,14 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 mkdir -p ~/.vim/swapfiles
 source ~/.bashrc
 nvim +PluginInstall +qall
+
+# populate bash history with some commands
+cat <<EOF >> ~/.bash_history
+git commit -am "$(curl -s https://whatthecommit.com/index.txt)"
+python3 -m venv venv
+git clone --recurse-submodules myrepo
+source venv/bin/activate
+pip install -r requirements.txt
+curl -4 icanhazip.com
+sudo -u postgres psql
+EOF
