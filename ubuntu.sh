@@ -2,6 +2,7 @@
 
 sudo apt update
 sudo apt install -y jq build-essential postgresql automake
+sudo apt install -y python3-venv
 
 # tmux
 sudo apt remove tmux -y # version 3.2 is auto installed
