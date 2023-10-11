@@ -2,7 +2,7 @@
 
 sudo apt update
 sudo apt install -y jq build-essential postgresql automake
-sudo apt install -y python3-venv ripgrep nodejs npm
+sudo apt install -y python3-venv ripgrep nodejs npm nginx
 sudo npm install -g n
 
 # tmux
