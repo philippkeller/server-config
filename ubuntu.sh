@@ -19,7 +19,8 @@ git clone https://github.com/philippkeller/tmux-config.git
 
 # code and environment
 cd ~
-git clone https://github.com/philippkeller/server-config.git
+export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+git clone git@github.com:philippkeller/server-config.git
 rm -f .vimrc
 ln -s server-config/.vimrc
 rm -f .ripgreprc
